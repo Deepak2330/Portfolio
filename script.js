@@ -72,7 +72,7 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.style.transform = 'none';
         }
     });
 }, observerOptions);
@@ -81,34 +81,18 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.skill-category, .timeline-item, .project-card, .stat').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    el.style.transition = 'opacity 0.6s ease, transform 0.3s ease, box-shadow 0.3s ease';
     observer.observe(el);
 });
 
-// Form submission
-const contactForm = document.querySelector('.contact-form form');
+// Contact form: opens the visitor's email client with the message pre-filled
+const contactForm = document.getElementById('contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(contactForm);
-        const data = Object.fromEntries(formData);
-        
-        // Simulate form submission
-        const submitButton = contactForm.querySelector('button[type="submit"]');
-        const originalText = submitButton.textContent;
-        
-        submitButton.textContent = 'Sending...';
-        submitButton.disabled = true;
-        
-        // Simulate API call
-        setTimeout(() => {
-            alert('Thank you for your message! I\'ll get back to you soon.');
-            contactForm.reset();
-            submitButton.textContent = originalText;
-            submitButton.disabled = false;
-        }, 2000);
+        const d = Object.fromEntries(new FormData(contactForm));
+        const body = `${d.message}\n\n- ${d.name} (${d.email})`;
+        window.location.href = `mailto:9901845901dk@gmail.com?subject=${encodeURIComponent(d.subject)}&body=${encodeURIComponent(body)}`;
     });
 }
 
@@ -133,7 +117,7 @@ window.addEventListener('load', () => {
     const roleElement = document.querySelector('.role');
     if (roleElement) {
         const roleText = roleElement.textContent;
-        typeWriter(roleElement, roleText, 100);
+        typeWriter(roleElement, roleText, 30);
     }
 });
 
@@ -147,43 +131,39 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Add hover effect to project cards
-document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        card.style.transform = 'translateY(-10px) rotateX(5deg)';
-    });
-    
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'translateY(0) rotateX(0deg)';
-    });
-});
-
-// Skills animation counter
-function animateValue(element, start, end, duration) {
-    let startTimestamp = null;
-    const step = (timestamp) => {
-        if (!startTimestamp) startTimestamp = timestamp;
-        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-        element.innerHTML = Math.floor(progress * (end - start) + start) + '+';
-        if (progress < 1) {
-            window.requestAnimationFrame(step);
-        }
+// Stats counter (supports decimals and suffixes via data attributes)
+function animateStat(el, end, suffix, duration) {
+    const decimals = String(end).includes('.') ? 1 : 0;
+    let startTs = null;
+    const step = (ts) => {
+        if (!startTs) startTs = ts;
+        const p = Math.min((ts - startTs) / duration, 1);
+        el.textContent = (end * p).toFixed(decimals) + (p === 1 ? suffix : '');
+        if (p < 1) requestAnimationFrame(step);
     };
-    window.requestAnimationFrame(step);
+    requestAnimationFrame(step);
 }
 
-// Animate statistics when they come into view
 const statObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            const statNumber = entry.target.querySelector('.stat-number');
-            const finalNumber = parseInt(statNumber.textContent);
-            animateValue(statNumber, 0, finalNumber, 2000);
+            const n = entry.target.querySelector('.stat-number');
+            animateStat(n, parseFloat(n.dataset.target), n.dataset.suffix || '', 1500);
             statObserver.unobserve(entry.target);
         }
     });
 });
+document.querySelectorAll('.stat').forEach(stat => statObserver.observe(stat));
 
-document.querySelectorAll('.stat').forEach(stat => {
-    statObserver.observe(stat);
+// Project filters (All / Technical Writing / DevOps)
+const filterButtons = document.querySelectorAll('.filter-btn');
+filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const f = btn.dataset.filter;
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.classList.toggle('hidden', f !== 'all' && card.dataset.category !== f);
+        });
+    });
 });

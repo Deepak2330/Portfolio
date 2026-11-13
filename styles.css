@@ -817,3 +817,100 @@ section {
         grid-template-columns: 1fr;
     }
 }
+
+/* ===== Technical Writer portfolio additions ===== */
+.hero-description { max-width: 560px; }
+.role { font-size: 1.5rem; line-height: 1.35; min-height: 4.2rem; }
+.role::after { content: '|'; margin-left: 2px; animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.85em;
+    background: var(--gray-100);
+    color: var(--primary-dark);
+    padding: 0.1em 0.4em;
+    border-radius: 4px;
+}
+
+/* About code card */
+.code-card {
+    width: 100%;
+    max-width: 340px;
+    background: var(--gray-900);
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+}
+.code-card-bar {
+    display: flex; align-items: center; gap: 6px;
+    padding: 0.75rem 1rem;
+    background: var(--gray-800);
+    color: var(--gray-400);
+    font-size: 0.8rem;
+}
+.code-card-bar i { width: 10px; height: 10px; border-radius: 50%; background: var(--gray-600); display: inline-block; }
+.code-card-bar i:nth-child(1) { background: var(--error); }
+.code-card-bar i:nth-child(2) { background: var(--warning); }
+.code-card-bar i:nth-child(3) { background: var(--success); }
+.code-card-bar span { margin-left: auto; }
+.code-card pre { padding: 1.25rem; color: var(--gray-200); font-size: 0.85rem; line-height: 1.6; overflow-x: auto; }
+.code-card code { background: none; color: inherit; padding: 0; font-size: inherit; }
+.c-k { color: #7DD3FC; }
+.c-s { color: #86EFAC; }
+.about-text p { margin-bottom: 1.25rem; }
+.stat-label { font-size: 0.85rem; }
+
+/* Skills */
+.skill-devops .skill-tag { background: var(--secondary); }
+.skill-devops .skill-tag:hover { background: #0F9488; }
+.skill-category h3 { font-size: 1.25rem; }
+
+/* Experience */
+.timeline-content h4 { font-size: 1rem; }
+.timeline-content code { font-size: 0.8em; }
+
+/* Project filters */
+.project-filters { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 2.5rem; }
+.filter-btn {
+    padding: 0.55rem 1.4rem; border-radius: 25px; cursor: pointer;
+    border: 2px solid var(--primary); background: transparent; color: var(--primary);
+    font: inherit; font-weight: 600; transition: all 0.3s ease;
+}
+.filter-btn:hover, .filter-btn.active { background: var(--primary); color: var(--white); }
+.project-card.hidden { display: none; }
+
+/* Project banner (replaces stock photos) */
+.projects-grid { grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); }
+.project-banner {
+    position: relative; height: 130px; display: flex; align-items: center; justify-content: center;
+    color: var(--white);
+}
+.banner-tw { background: linear-gradient(135deg, var(--primary-dark), #6366F1); }
+.banner-devops { background: linear-gradient(135deg, #0F766E, var(--secondary)); }
+.project-label { font-size: 1.6rem; font-weight: 700; letter-spacing: 0.08em; }
+.project-badge {
+    position: absolute; top: 12px; left: 12px; font-size: 0.7rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    background: rgba(255, 255, 255, 0.2); color: var(--white); padding: 0.2rem 0.65rem; border-radius: 12px;
+}
+.project-content h3 { margin-bottom: 0.75rem; }
+.project-content p { margin-bottom: 1rem; }
+.project-points { list-style: none; margin-bottom: 1.25rem; }
+.project-points li { position: relative; padding-left: 1.25rem; margin-bottom: 0.4rem; color: var(--gray-600); font-size: 0.92rem; }
+.project-points li::before { content: '▸'; position: absolute; left: 0; color: var(--primary); }
+
+/* Education */
+.education { background: var(--gray-50); }
+.edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+.edu-list { list-style: none; }
+.edu-list li { margin-bottom: 1.25rem; color: var(--gray-600); }
+.edu-list strong { color: var(--gray-900); }
+.contact-info .btn { width: auto; }
+
+@media (max-width: 768px) {
+    .projects-grid { grid-template-columns: 1fr; }
+    .about-image { order: -1; }
+    .role { min-height: 0; }
+}
+@media (prefers-reduced-motion: reduce) { .role::after { animation: none; } }

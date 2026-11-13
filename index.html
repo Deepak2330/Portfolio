@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Professional Profile</title>
+    <title>Deepak M | Technical Writer - API Documentation &amp; OpenAPI</title>
+    <meta name="description" content="Technical Writer specializing in API documentation, OpenAPI 3.1, AsyncAPI, GraphQL and contract-first documentation, with DevOps and cloud background.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -12,7 +13,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="#home">Portfolio</a>
+                <a href="#home">Deepak M</a>
             </div>
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
@@ -20,9 +21,10 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="hamburger">
+            <div class="hamburger" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -37,11 +39,11 @@
                 <div class="hero-text">
                     <h1 class="hero-title">
                         <span class="greeting">Hello, I'm</span>
-                        <span class="name">DeepaK </span>
-                        <span class="role">DevOps Engineer | Cloud Enthusiast | Automating Ideas into Scalable Systems</span>
+                        <span class="name">Deepak M</span>
+                        <span class="role">Technical Writer | API Documentation &amp; OpenAPI 3.1 | REST, AsyncAPI &amp; GraphQL</span>
                     </h1>
                     <p class="hero-description">
-                        🚀 I'm a passionate DevOps & Cloud Engineer with 2+ years of experience automating, securing, and scaling infrastructure. I specialize in AWS, CI/CD pipelines, Docker, Jenkins, Kubernetes, Openshift and monitoring tools like Grafana and Prometheus.
+                        I turn complex engineering information into accurate, structured and developer-friendly documentation. 3.5+ years writing API reference content, developer guides, release notes and SOPs, currently supporting the eBay Developer Program with contract-first documentation. With a DevOps and cloud background, I also understand the pipelines and platforms I document.
                     </p>
                     <div class="hero-buttons">
                         <a href="#contact" class="btn btn-primary">Get In Touch</a>
@@ -50,9 +52,8 @@
                 </div>
                 <div class="hero-image">
                     <div class="image-placeholder">
-                        <div class="avatar" >
-                            <img class="avatar-photo" src="/public/118657357.jpg" alt="DeepaK Photo" />
-                          
+                        <div class="avatar">
+                            <img class="avatar-photo" src="/public/118657357.jpg" alt="Deepak M photo" />
                         </div>
                     </div>
                 </div>
@@ -66,23 +67,37 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p class="about-intro">I'm a DevOps and Cloud Engineer passionate about automating and scaling digital infrastructure.</p>
-                    <p>With over 2 years of hands-on experience, I specialize in building secure, scalable DevOps pipelines, managing cloud-native deployments on AWS, and optimizing development workflows. </p>
+                    <p class="about-intro">Technical Writer specializing in API documentation and contract-first workflows.</p>
+                    <p>I create Postman API developer documentation, API reference content, user guides, GraphQL release notes, SOPs and structured CMS content. At the eBay Developer Program (through MaxRidge Private Limited) I migrate legacy API docs to OpenAPI 3.1, review generated contracts, and publish through QA-to-production CMS workflows.</p>
+                    <p>I also review documentation quality in detail: missing descriptions, incorrect required fields, incomplete enums, duplicate errors, inconsistent schemas, broken links and missing samples. My DevOps and cloud experience (AWS, Docker, Jenkins, Kubernetes, Terraform) helps me document developer platforms accurately and work comfortably with engineers.</p>
                     <div class="stats">
                         <div class="stat">
-                            <span class="stat-number">2+</span>
-                            <span class="stat-label">Years Experience</span>
+                            <span class="stat-number" data-target="3.5" data-suffix="+">3.5+</span>
+                            <span class="stat-label">Years as Technical Writer</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">4+</span>
-                            <span class="stat-label">Projects Completed</span>
+                            <span class="stat-number" data-target="3" data-suffix="">3</span>
+                            <span class="stat-label">API Styles: REST, AsyncAPI, GraphQL</span>
                         </div>
-                        
+                        <div class="stat">
+                            <span class="stat-number" data-target="2" data-suffix="">2</span>
+                            <span class="stat-label">Technical Writing Roles</span>
+                        </div>
                     </div>
                 </div>
                 <div class="about-image">
-                    <div class="about-photo">
-                        <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Professional Photo" />
+                    <div class="code-card" aria-hidden="true">
+                        <div class="code-card-bar"><i></i><i></i><i></i><span>openapi.yaml</span></div>
+<pre><code><span class="c-k">openapi</span>: <span class="c-s">3.1.0</span>
+<span class="c-k">info</span>:
+  <span class="c-k">title</span>: <span class="c-s">Sample API</span>
+<span class="c-k">paths</span>:
+  <span class="c-k">/item/{id}</span>:
+    <span class="c-k">get</span>:
+      <span class="c-k">summary</span>: <span class="c-s">Get an item</span>
+      <span class="c-k">responses</span>:
+        <span class="c-s">'200'</span>:
+          <span class="c-k">description</span>: <span class="c-s">OK</span></code></pre>
                     </div>
                 </div>
             </div>
@@ -92,52 +107,46 @@
     <!-- Skills Section -->
 <section id="skills" class="skills">
     <div class="container">
-        <h2 class="section-title">Skills & Expertise</h2>
+        <h2 class="section-title">Skills &amp; Expertise</h2>
         <div class="skills-grid">
-            <div class="skill-category">
-                <h3>DevOps & Cloud</h3>
+            <div class="skill-category ">
+                <h3>API &amp; Developer Documentation</h3>
                 <div class="skill-items">
-                    <span class="skill-tag">Agile Methodology </span>
-                    <span class="skill-tag">AWS</span>
-                    <span class="skill-tag">Azure</span>
-                    <span class="skill-tag">Git</span>
-                    <span class="skill-tag">Linux</span>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">Jenkins</span>
-                    <span class="skill-tag">Kubernetes</span>
-                    <span class="skill-tag">Openshift</span>
-                    <span class="skill-tag">Terraform</span>
-                    <span class="skill-tag">Ansible</span>
+                    <span class="skill-tag">API Documentation</span><span class="skill-tag">OpenAPI Specification</span><span class="skill-tag">OAS 3.1</span><span class="skill-tag">REST APIs</span><span class="skill-tag">AsyncAPI</span><span class="skill-tag">GraphQL</span><span class="skill-tag">JSON</span><span class="skill-tag">YAML</span><span class="skill-tag">Contract-First Documentation</span><span class="skill-tag">Postman</span><span class="skill-tag">Release Notes</span><span class="skill-tag">Developer Guides</span>
                 </div>
             </div>
-            <div class="skill-category">
-                <h3>Backend & Automation</h3>
+
+            <div class="skill-category ">
+                <h3>Technical Writing &amp; Content</h3>
                 <div class="skill-items">
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Java</span>
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">Express.js</span>
-                   
-                <span class="skill-tag">MySQL</span>
-                <span class="skill-tag">REST API</span>
+                    <span class="skill-tag">Technical Editing</span><span class="skill-tag">Information Architecture</span><span class="skill-tag">Content Governance</span><span class="skill-tag">DITA/XML</span><span class="skill-tag">SOPs</span><span class="skill-tag">User Guides</span><span class="skill-tag">Style Guides</span><span class="skill-tag">CMS Publishing</span><span class="skill-tag">Documentation QA</span>
                 </div>
             </div>
-            <div class="skill-category">
-                <h3>Testing & Monitoring</h3>
+
+            <div class="skill-category ">
+                <h3>Tools &amp; Collaboration</h3>
                 <div class="skill-items">
-                    <span class="skill-tag">Selenium</span>
-                    <span class="skill-tag">TestNG</span>
-                    <span class="skill-tag">Postman</span>
-                    <span class="skill-tag">JMeter</span>
-                    <span class="skill-tag">Grafana</span>
-                    <span class="skill-tag">Trivy</span>
-                    <span class="skill-tag">Prometheus</span>
+                    <span class="skill-tag">Jira</span><span class="skill-tag">GitHub</span><span class="skill-tag">Confluence</span><span class="skill-tag">Slack</span><span class="skill-tag">Oxygen XML Editor</span><span class="skill-tag">Adobe FrameMaker</span><span class="skill-tag">MadCap Flare</span><span class="skill-tag">SnagIt</span><span class="skill-tag">Agile</span>
                 </div>
             </div>
+
+            <div class="skill-category skill-devops">
+                <h3>DevOps &amp; Cloud</h3>
+                <div class="skill-items">
+                    <span class="skill-tag">AWS</span><span class="skill-tag">Azure</span><span class="skill-tag">Git</span><span class="skill-tag">Linux</span><span class="skill-tag">Docker</span><span class="skill-tag">Jenkins</span><span class="skill-tag">Kubernetes</span><span class="skill-tag">OpenShift</span><span class="skill-tag">Terraform</span><span class="skill-tag">Ansible</span>
+                </div>
+            </div>
+
+            <div class="skill-category skill-devops">
+                <h3>Automation &amp; Monitoring</h3>
+                <div class="skill-items">
+                    <span class="skill-tag">Python</span><span class="skill-tag">Java</span><span class="skill-tag">Node.js</span><span class="skill-tag">Grafana</span><span class="skill-tag">Prometheus</span><span class="skill-tag">Trivy</span><span class="skill-tag">Selenium</span><span class="skill-tag">JMeter</span>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
-
 
     <!-- Experience Section -->
 <section id="experience" class="experience">
@@ -147,18 +156,36 @@
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <h3>Junior DevOps Engineer</h3>
-                    <h4>YDI Solutions, Bengaluru, India</h4>
-                    <span class="timeline-date">June 2023 – Present</span>
-                    <p>Delivered secure, scalable cloud infrastructure and DevOps automation across multiple client projects using AWS, Terraform, Jenkins, and Docker. Contributed to uptime, efficiency, and cost optimization through IaC, proactive monitoring, and automation.</p>
+                    <h3>Technical Writer – API Documentation</h3>
+                    <h4>MaxRidge Private Limited · Client: eBay Developer Program</h4>
+                    <span class="timeline-date">February 2026 – Present · Bengaluru, India</span>
+                    <p>Support the creation, migration, review and publication of developer documentation for eBay APIs and developer platform content.</p>
                     <ul>
-                        <li>Developed and maintained CI/CD pipelines using Jenkins, GitHub, and Ansible</li>
-                        <li>Provisioned and managed AWS infrastructure with Terraform and CloudFormation</li>
-                        <li>Monitored services using Prometheus, Grafana, CloudWatch, and Icinga2</li>
-                        <li>Deployed Dockerized workloads using EKS and OpenShift with Helm and Argo CD</li>
-                        <li>Automated service limit alerts with Python and AWS Trusted Advisor</li>
-                        <li>Managed 180+ EC2 instances and enforced S3 lifecycle rules for cost-efficiency</li>
-                        <li>Diagnosed Linux networking, DNS, and firewall issues affecting container communication</li>
+                        <li>Migrate legacy REST API documentation to contract-based documentation using service design documents and OpenAPI 3.1 specifications</li>
+                        <li>Review OpenAPI JSON/YAML contracts, including service/domain, generated, staging, merged and CMS-ready specifications</li>
+                        <li>Compare source and generated specs to find unexpected schemas, <code>$ref</code> additions, missing descriptions, incorrect types and duplicates</li>
+                        <li>Author and update API overviews, methods, parameters, response fields, schemas, enums, errors, HTTP headers, OAuth scopes, samples and release notes</li>
+                        <li>Document event-driven notifications with AsyncAPI and review GraphQL schemas for analytics, rate limits and bulk data transfer thresholds</li>
+                        <li>Maintain developer portal content through CMS workflows: landing pages, guides, redirects, HTML and QA-to-production publishing</li>
+                        <li>Run QA and production parity reviews; present demos on SDD-to-OAS conversion, spec comparison and production-readiness checks</li>
+                        <li>Collaborate with engineers, PMs, SMEs, QA and reviewers through Jira, GitHub, Slack and Confluence</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Technical Writer</h3>
+                    <h4>Hoder Solutions Private Limited</h4>
+                    <span class="timeline-date">May 2023 – February 2026 · Bengaluru, India</span>
+                    <p>Created and maintained product and engineering documentation, working closely with developers, SMEs, QA engineers and product managers.</p>
+                    <ul>
+                        <li>Wrote user guides, installation manuals, API documentation, SOPs, internal procedures and release notes</li>
+                        <li>Developed structured content with DITA/XML, Adobe FrameMaker and Oxygen XML Editor</li>
+                        <li>Documented API workflows, deployment procedures, product functionality and internal engineering processes</li>
+                        <li>Created annotated screenshots, workflows and step-by-step instructions using SnagIt</li>
+                        <li>Implemented documentation templates, writing standards and structured-content practices</li>
+                        <li>Conducted technical reviews and maintained version-controlled content in line with style guides and governance requirements</li>
                     </ul>
                 </div>
             </div>
@@ -170,105 +197,185 @@
 <section id="projects" class="projects">
     <div class="container">
         <h2 class="section-title">Featured Projects</h2>
+        <div class="project-filters" role="tablist">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="tw">Technical Writing</button>
+            <button class="filter-btn" data-filter="devops">DevOps &amp; Cloud</button>
+        </div>
         <div class="projects-grid">
 
-            <!-- Project 1 -->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="https://images.pexels.com/photos/6829336/pexels-photo-6829336.jpeg?auto=compress&cs=tinysrgb&w=600" alt="CI/CD Pipeline Automation" />
-                    <div class="project-overlay">
-                        <div class="project-links">
-                            <a href="#" class="project-link">Live Demo</a>
-                            <a href="https://github.com/yourusername/devops-cicd-pipeline" class="project-link">GitHub</a>
-                        </div>
-                    </div>
+            <article class="project-card" data-category="tw">
+                <div class="project-banner banner-tw">
+                    <span class="project-badge">Technical Writing</span>
+                    <span class="project-label">OAS 3.1</span>
+                </div>
+                <div class="project-content">
+                    <h3>Legacy-to-OpenAPI 3.1 Migration</h3>
+                    <p>Migrated legacy REST API documentation to contract-based documentation using service design documents (SDDs) and OpenAPI 3.1 specifications for the eBay Developer Program.</p>
+                    <ul class="project-points"><li>Authored methods, parameters, response fields, schemas, enums, errors, headers and OAuth scopes</li><li>Validated required inputs and always-returned outputs through schema-level <code>required</code> arrays</li></ul>
+                    <div class="project-tags"><span>OpenAPI 3.1</span><span>SDD to OAS</span><span>REST</span><span>JSON/YAML</span></div>
+                </div>
+            </article>
+
+            <article class="project-card" data-category="tw">
+                <div class="project-banner banner-tw">
+                    <span class="project-badge">Technical Writing</span>
+                    <span class="project-label">SPEC REVIEW</span>
+                </div>
+                <div class="project-content">
+                    <h3>OpenAPI Contract Review &amp; Comparison</h3>
+                    <p>Reviewed service, domain, generated, staging, merged and CMS-ready specifications, comparing source and generated contracts to catch generation issues before publication.</p>
+                    <ul class="project-points"><li>Flagged unexpected schemas, added <code>$ref</code>s, incorrect types and duplicate errors</li><li>Resolved missing descriptions, incomplete enums and inconsistent terminology</li></ul>
+                    <div class="project-tags"><span>OAS Validation</span><span>$ref</span><span>Schemas</span><span>Quality Review</span></div>
+                </div>
+            </article>
+
+            <article class="project-card" data-category="tw">
+                <div class="project-banner banner-tw">
+                    <span class="project-badge">Technical Writing</span>
+                    <span class="project-label">ASYNCAPI</span>
+                </div>
+                <div class="project-content">
+                    <h3>Event Notification Documentation</h3>
+                    <p>Documented event-driven notifications with AsyncAPI, covering notification payloads, topics and developer-facing notification pages on the developer portal.</p>
+                    
+                    <div class="project-tags"><span>AsyncAPI</span><span>Notifications</span><span>Payloads</span><span>Developer Portal</span></div>
+                </div>
+            </article>
+
+            <article class="project-card" data-category="tw">
+                <div class="project-banner banner-tw">
+                    <span class="project-badge">Technical Writing</span>
+                    <span class="project-label">GRAPHQL</span>
+                </div>
+                <div class="project-content">
+                    <h3>GraphQL Schema Docs &amp; Release Notes</h3>
+                    <p>Reviewed and documented GraphQL schemas for analytics, rate limits, bulk data transfer thresholds and related types, and wrote GraphQL release notes for developers.</p>
+                    
+                    <div class="project-tags"><span>GraphQL</span><span>Release Notes</span><span>Analytics</span><span>Rate Limits</span></div>
+                </div>
+            </article>
+
+            <article class="project-card" data-category="tw">
+                <div class="project-banner banner-tw">
+                    <span class="project-badge">Technical Writing</span>
+                    <span class="project-label">CMS</span>
+                </div>
+                <div class="project-content">
+                    <h3>Developer Portal Content &amp; CMS Publishing</h3>
+                    <p>Maintained landing pages, guides, notification pages, redirects, HTML content and API groupings, publishing through a QA-to-production CMS workflow.</p>
+                    
+                    <div class="project-tags"><span>CMS</span><span>HTML</span><span>Redirects</span><span>QA to Prod</span></div>
+                </div>
+            </article>
+
+            <article class="project-card" data-category="tw">
+                <div class="project-banner banner-tw">
+                    <span class="project-badge">Technical Writing</span>
+                    <span class="project-label">PARITY QA</span>
+                </div>
+                <div class="project-content">
+                    <h3>QA vs Production Parity Reviews</h3>
+                    <p>Ran detailed documentation quality reviews comparing legacy production docs with new contract-based docs, so nothing is lost in migration.</p>
+                    <ul class="project-points"><li>Checked method order, links, formatting, status and error codes, enums, descriptions, samples and release notes</li><li>Covered Buy, Sell, Commerce, notification, analytics, account, logistics, finance, marketing and browse APIs</li></ul>
+                    <div class="project-tags"><span>Quality Review</span><span>Content Governance</span><span>Jira</span><span>GitHub</span></div>
+                </div>
+            </article>
+
+            <article class="project-card" data-category="tw">
+                <div class="project-banner banner-tw">
+                    <span class="project-badge">Technical Writing</span>
+                    <span class="project-label">DITA / XML</span>
+                </div>
+                <div class="project-content">
+                    <h3>Structured Content &amp; SOP Library</h3>
+                    <p>Created user guides, installation manuals, API documentation, SOPs and release notes as structured, version-controlled content at Hoder Solutions.</p>
+                    <ul class="project-points"><li>Introduced documentation templates, writing standards and structured-content practices</li><li>Produced annotated screenshots and step-by-step workflows with SnagIt</li></ul>
+                    <div class="project-tags"><span>DITA/XML</span><span>FrameMaker</span><span>Oxygen XML</span><span>SnagIt</span></div>
+                </div>
+            </article>
+
+            <article class="project-card" data-category="devops">
+                <div class="project-banner banner-devops">
+                    <span class="project-badge">DevOps</span>
+                    <span class="project-label">CI / CD</span>
                 </div>
                 <div class="project-content">
                     <h3>CI/CD Pipeline Automation</h3>
-                    <p>End-to-end CI/CD pipeline using Jenkins, GitHub, Docker, and Ansible on AWS. Includes job triggers, rollback, and email alerts.</p>
-                    <div class="project-tags">
-                        <span>Jenkins</span>
-                        <span>Docker</span>
-                        <span>Ansible</span>
-                        <span>AWS</span>
-                    </div>
+                    <p>End-to-end CI/CD pipeline using Jenkins, GitHub, Docker and Ansible on AWS. Includes job triggers, rollback and email alerts.</p>
+                    
+                    <div class="project-tags"><span>Jenkins</span><span>Docker</span><span>Ansible</span><span>AWS</span></div>
                 </div>
-            </div>
+            </article>
 
-            <!-- Project 2 -->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="https://images.pexels.com/photos/1181315/pexels-photo-1181315.jpeg?auto=compress&cs=tinysrgb&w=600" alt="AWS Infrastructure as Code" />
-                    <div class="project-overlay">
-                        <div class="project-links">
-                            <a href="#" class="project-link">Live Demo</a>
-                            <a href="https://github.com/yourusername/aws-terraform-infra" class="project-link">GitHub</a>
-                        </div>
-                    </div>
+            <article class="project-card" data-category="devops">
+                <div class="project-banner banner-devops">
+                    <span class="project-badge">DevOps</span>
+                    <span class="project-label">IaC</span>
                 </div>
                 <div class="project-content">
                     <h3>AWS Infrastructure Automation</h3>
-                    <p>Provisioned scalable, secure cloud infrastructure using Terraform, including EC2, VPC, RDS, S3, and IAM roles.</p>
-                    <div class="project-tags">
-                        <span>Terraform</span>
-                        <span>AWS</span>
-                        <span>EC2</span>
-                        <span>S3</span>
-                    </div>
+                    <p>Provisioned scalable, secure cloud infrastructure using Terraform, including EC2, VPC, RDS, S3 and IAM roles.</p>
+                    
+                    <div class="project-tags"><span>Terraform</span><span>AWS</span><span>EC2</span><span>S3</span></div>
                 </div>
-            </div>
+            </article>
 
-            <!-- Project 3 -->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="https://images.pexels.com/photos/6476269/pexels-photo-6476269.jpeg?auto=compress&cs=tinysrgb&w=600" alt="DevOps Monitoring Stack" />
-                    <div class="project-overlay">
-                        <div class="project-links">
-                            <a href="#" class="project-link">Live Demo</a>
-                            <a href="https://github.com/yourusername/devops-monitoring-stack" class="project-link">GitHub</a>
-                        </div>
-                    </div>
+            <article class="project-card" data-category="devops">
+                <div class="project-banner banner-devops">
+                    <span class="project-badge">DevOps</span>
+                    <span class="project-label">OBSERVABILITY</span>
                 </div>
                 <div class="project-content">
                     <h3>DevOps Monitoring Stack</h3>
-                    <p>Implemented a centralized monitoring solution using Prometheus, Grafana, ELK stack, and AWS CloudWatch for infrastructure observability.</p>
-                    <div class="project-tags">
-                        <span>Prometheus</span>
-                        <span>Grafana</span>
-                        <span>ELK</span>
-                        <span>CloudWatch</span>
-                    </div>
+                    <p>Centralized monitoring using Prometheus, Grafana, ELK and AWS CloudWatch for infrastructure observability.</p>
+                    
+                    <div class="project-tags"><span>Prometheus</span><span>Grafana</span><span>ELK</span><span>CloudWatch</span></div>
                 </div>
-            </div>
+            </article>
 
-            <!-- Project 4 -->
-<div class="project-card">
-    <div class="project-image">
-        <img src="https://images.pexels.com/photos/7579822/pexels-photo-7579822.jpeg?auto=compress&cs=tinysrgb&w=600" alt="OpenShift Deployment" />
-        <div class="project-overlay">
-            <div class="project-links">
-                <a href="#" class="project-link">Live Demo</a>
-                <a href="https://github.com/yourusername/openshift-gitops-deployment" class="project-link">GitHub</a>
-            </div>
-        </div>
-    </div>
-    <div class="project-content">
-        <h3>OpenShift GitOps Deployment</h3>
-        <p>Deployed containerized applications on Red Hat OpenShift using Helm charts and Argo CD. Set up GitOps workflows to automate deployments across namespaces.</p>
-        <div class="project-tags">
-            <span>OpenShift</span>
-            <span>Helm</span>
-            <span>Argo CD</span>
-            <span>GitOps</span>
-        </div>
-    </div>
-</div>
-
+            <article class="project-card" data-category="devops">
+                <div class="project-banner banner-devops">
+                    <span class="project-badge">DevOps</span>
+                    <span class="project-label">GITOPS</span>
+                </div>
+                <div class="project-content">
+                    <h3>OpenShift GitOps Deployment</h3>
+                    <p>Deployed containerized applications on Red Hat OpenShift using Helm charts and Argo CD, with GitOps workflows to automate deployments across namespaces.</p>
+                    
+                    <div class="project-tags"><span>OpenShift</span><span>Helm</span><span>Argo CD</span><span>GitOps</span></div>
+                </div>
+            </article>
 
         </div>
     </div>
 </section>
 
+    <!-- Education Section -->
+<section id="education" class="education">
+    <div class="container">
+        <h2 class="section-title">Education &amp; Certifications</h2>
+        <div class="edu-grid">
+            <div class="skill-category">
+                <h3>Education</h3>
+                <ul class="edu-list">
+                    <li><strong>Master of Computer Applications, Cloud Computing</strong><br>Jain (Deemed-to-be University) · Sep 2023 – Oct 2025</li>
+                    <li><strong>Bachelor of Science, Computer Science</strong><br>Government Science College, Bangalore · Mar 2018 – Apr 2023</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Certifications &amp; Courses</h3>
+                <div class="skill-items">
+                    <span class="skill-tag">Technical Writing: Quick Start Guides</span>
+                    <span class="skill-tag">Agile and Lean Foundations</span>
+                    <span class="skill-tag">AWS Cloud Practitioner</span>
+                    <span class="skill-tag">JavaScript: Unlocking the Power of JavaScript</span>
+                    <span class="skill-tag">Introduction to Programming Using Python</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
@@ -277,7 +384,7 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <h3>Get In Touch</h3>
-                    <p>I'm always interested in hearing about new opportunities and exciting projects. Let's create something amazing together.</p>
+                    <p>Looking for a technical writer for API documentation, developer portals or contract-first documentation? I'd love to hear from you.</p>
                     <div class="contact-details">
                         <div class="contact-item">
                             <span class="contact-icon">📧</span>
@@ -285,36 +392,33 @@
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon">📱</span>
-                            <span>+916362893660</span>
+                            <span>+91 6362893660</span>
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon">📍</span>
-                            <span>Bengaluru, India</span>
+                            <span>Bengaluru, Karnataka, India</span>
                         </div>
                     </div>
                     <div class="social-links">
-    <a href="https://www.linkedin.com/in/deepak-m-9370261b4/" class="btn btn-primary" target="_blank">LinkedIn</a>
-    <a href="https://github.com/Deepak2330" class="btn btn-primary" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/deepak-m-9370261b4/" class="btn btn-primary" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/Deepak2330" class="btn btn-primary" target="_blank" rel="noopener">GitHub</a>
     <a href="mailto:9901845901dk@gmail.com" class="btn btn-primary">Email</a>
-   <a href="/public/Deepak.pdf" class="btn btn-primary" download>Download Resume</a>
-
+    <a href="/public/Deepak.pdf" class="btn btn-primary" download>Download Resume</a>
 </div>
-
-
                 </div>
                 <div class="contact-form">
-                    <form>
+                    <form id="contact-form">
                         <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                            <input type="text" name="name" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="Subject" required>
+                            <input type="text" name="subject" placeholder="Subject" required>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
@@ -326,7 +430,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Your Name. All rights reserved.</p>
+            <p>&copy; 2026 Deepak M. Technical Writer · API Documentation.</p>
         </div>
     </footer>
 
